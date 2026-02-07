@@ -11,10 +11,8 @@ A Node.js application that connects to WhatsApp and automatically replies to mes
 
 2. **Configure Azure OpenAI:**
    - Open `.env` file
-   - Set the following variables:
-     - `AZURE_OPENAI_API_KEY` - Your Azure OpenAI API key
-     - `AZURE_OPENAI_ENDPOINT` - Your Azure OpenAI endpoint URL
-     - `AZURE_OPENAI_DEPLOYMENT` - Your deployment name (e.g., gpt-4)
+   - Set `AZURE_OPENAI_API_KEY` to your Azure OpenAI API key
+   - The resource name (`sms-analyze`) and model (`gpt-5-nano`) are already configured
 
 3. **Configure target number (optional):**
    - In `.env` file, set `TARGET_PHONE_NUMBER` to the WhatsApp number you want to auto-reply to

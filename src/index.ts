@@ -95,9 +95,9 @@ client.on('message', async (message) => {
       console.log(`   💡 AI Suggestion: ${aiResponse}`);
       
       // Wait 1-2 seconds (random)
-      const waitTime = 1000 + Math.random() * 1000; // 1000-2000ms
-      console.log(`   ⏳ Typing... (${Math.round(waitTime)}ms)`);
-      await delay(waitTime);
+      // const waitTime = 1000 + Math.random() * 1000; // 1000-2000ms
+      // console.log(`   ⏳ Typing... (${Math.round(waitTime)}ms)`);
+      // await delay(waitTime);
       
       // Reply with AI suggestion
       await message.reply(aiResponse);

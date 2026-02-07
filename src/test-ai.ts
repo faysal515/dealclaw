@@ -7,8 +7,8 @@ import { suggestBestDeal } from './ai';
 async function testDealSuggestion() {
   console.log('🧪 Testing AI Deal Suggestion\n');
   
-  // Test message: "i want to do my fuel at adnoc"
-  const testMessage = 'i want to do my fuel at adnoc';
+  // Test message: Talabat order
+  const testMessage = 'ordering food from talabat';
   
   console.log(`📨 User Message: "${testMessage}"\n`);
   console.log('🤖 Analyzing with AI...\n');
