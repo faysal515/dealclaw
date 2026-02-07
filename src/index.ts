@@ -1,6 +1,7 @@
 import { Client, LocalAuth } from 'whatsapp-web.js';
 import qrcode from 'qrcode-terminal';
 import * as dotenv from 'dotenv';
+import { suggestBestDeal } from './ai';
 
 // Load environment variables
 dotenv.config();
@@ -88,13 +89,18 @@ client.on('message', async (message) => {
       // Show typing indicator
       await chat.sendStateTyping();
       
+      // Get AI suggestion based on user message
+      console.log('   🤖 Analyzing message with AI...');
+      const aiResponse = await suggestBestDeal(message.body);
+      console.log(`   💡 AI Suggestion: ${aiResponse}`);
+      
       // Wait 1-2 seconds (random)
       const waitTime = 1000 + Math.random() * 1000; // 1000-2000ms
       console.log(`   ⏳ Typing... (${Math.round(waitTime)}ms)`);
       await delay(waitTime);
       
-      // Reply with "hi"
-      await message.reply('hi');
+      // Reply with AI suggestion
+      await message.reply(aiResponse);
       
       console.log('   ✅ Reply sent!');
     } else {
