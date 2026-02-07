@@ -1,4 +1,4 @@
-# WhatsApp Deal Finder
+# CardSense - Get the best deal out of your card
 
 A Node.js application that connects to WhatsApp and automatically replies to messages from a specific number.
 
